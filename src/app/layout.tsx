@@ -1,7 +1,8 @@
-import getDictionary from "@/i18n"
-import { FC } from "react"
-import { Poppins } from "next/font/google"
+import AsideMenu from "@/components/layout/Aside"
 import "@/design/globals.css"
+import getDictionary from "@/i18n"
+import { Poppins } from "next/font/google"
+import { FC } from "react"
 
 const RootLayout: FC<ParentComponent> = async ({
   children
@@ -10,7 +11,11 @@ const RootLayout: FC<ParentComponent> = async ({
 
   return <html lang={dictionary.meta.lang}>
     <body className={font.className}>
-      {children}
+      <AsideMenu />
+
+      <div className="flex-1 p-4 pl-0">
+        {children}
+      </div>
     </body>
   </html>
 }

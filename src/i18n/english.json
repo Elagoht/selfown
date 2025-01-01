@@ -2,9 +2,10 @@
   "meta": {
     "lang": "en"
   },
-  "branding": {
-    "name": "SelfOwn",
-    "slogan": "Own your own data!"
+  "layout": {
+    "aside": {
+      "title": "SelfOwn"
+    }
   },
   "pages": {
     "dashboad": {

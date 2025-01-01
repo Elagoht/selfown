@@ -1,10 +1,11 @@
 {
   "meta": {
-    "lang": "en"
+    "lang": "tr"
   },
-  "branding": {
-    "name": "SelfOwn",
-    "slogan": "Kendi verine sahip ol!"
+  "layout": {
+    "aside": {
+      "title": "SelfOwn"
+    }
   },
   "pages": {
     "dashboad": {
