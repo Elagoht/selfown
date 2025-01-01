@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "lang": "en"
+  },
+  "branding": {
+    "name": "SelfOwn",
+    "slogan": "Kendi verine sahip ol!"
+  },
+  "pages": {
+    "dashboad": {
+      "title": "SelfOwn",
+      "slogan": "Kendi verine sahip ol!"
+    }
+  }
+}

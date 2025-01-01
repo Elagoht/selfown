@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "lang": "en"
+  },
+  "branding": {
+    "name": "SelfOwn",
+    "slogan": "Own your own data!"
+  },
+  "pages": {
+    "dashboad": {
+      "title": "SelfOwn",
+      "slogan": "Own your own data!"
+    }
+  }
+}
