@@ -6,4 +6,13 @@
   body {
     @apply bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 flex
   }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none;
+  }
 }

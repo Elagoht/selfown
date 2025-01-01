@@ -7,8 +7,7 @@ const AsideMenu: FC = async () => {
 
   return <aside className="p-4 h-screen">
     <div className="flex flex-col bg-purple-500 w-72 h-full items-center
-      gap-10 py-4 rounded-3xl"
-    >
+      gap-10 py-4 rounded-3xl scrollbar-hidden overflow-auto">
       <figure className="flex flex-col items-center">
         <IconCloud
           stroke={1.5}
