@@ -25,7 +25,7 @@ class System {
     )
   }
 
-  public static getSystemInfo(): Promise<SystemInfo> {
+  public static info(): Promise<SystemInfo> {
     return this.handleProcesses<SystemInfo>(
       "uname -a | awk '{printf \"{\"kernel_name\":\"%s\", \"hostname\":\"%s\", \"kernel_version\":\"%s\", \"os_version\":\"%s\", \"architecture\":\"%s\"}\n\", $1, $2, $3, $4, $NF}'"
     )
