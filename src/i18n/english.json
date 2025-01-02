@@ -4,7 +4,13 @@
   },
   "layout": {
     "aside": {
-      "title": "SelfOwn"
+      "title": "SelfOwn",
+      "menu": {
+        "dashboard": "Dashboard",
+        "settings": "Settings",
+        "myApps": "My Apps",
+        "store": "Store"
+      }
     }
   },
   "pages": {

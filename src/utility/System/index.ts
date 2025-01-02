@@ -63,17 +63,3 @@ export class SystemError extends Error {
 }
 
 export default System
-
-type UsageMetrics = {
-  total: number
-  used: number
-  percentage: number
-}
-
-type SystemInfo = {
-  kernel_name: string
-  hostname: string
-  kernel_version: string
-  os_version: string
-  architecture: string
-}

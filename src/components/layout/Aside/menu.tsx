@@ -8,19 +8,19 @@ const iconProps = {
 }
 
 const asideMenu: AsideMenuItem[] = [{
-  title: "Dashboard",
+  title: "dashboard",
   icon: <IconDashboard {...iconProps} />,
   href: "/"
 }, {
-  title: "Installed Apps",
+  title: "myApps",
   icon: <IconApps {...iconProps} />,
   href: "/apps"
 }, {
-  title: "Store",
+  title: "store",
   icon: <IconBuildingStore {...iconProps} />,
   href: "/store"
 }, {
-  title: "Settings",
+  title: "settings",
   icon: <IconSettings {...iconProps} />,
   href: "/settings"
 }]
@@ -28,7 +28,7 @@ const asideMenu: AsideMenuItem[] = [{
 export default asideMenu
 
 type AsideMenuItem = {
-  title: string
+  title: keyof Dictionary["layout"]["aside"]["menu"]
   icon: React.ReactNode
   href: string
 }
