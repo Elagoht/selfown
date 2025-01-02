@@ -45,7 +45,8 @@ const UsageMetricCard: FC<UsageMetricCardProps> = ({
   }
 
   return <div className="flex flex-col items-center justify-center
-    bg-purple-500 p-4 rounded-3xl shadow-md text-purple-100"
+  bg-black bg-opacity-30 backdrop-blur-md p-4 rounded-3xl shadow-md
+  text-white"
   >
     <h1 className="text-xl font-bold">{name}</h1>
 
@@ -54,10 +55,9 @@ const UsageMetricCard: FC<UsageMetricCardProps> = ({
 
       <div className="absolute inset-0 flex items-center justify-center">
         <p className="text-sm text-center mt-3">
-          {convert(metric.used)
-          }<br /> {convert(metric.total)
-          }<br /> ({metric.percentage
-          }%)
+          {convert(metric.used)}<br />
+          {convert(metric.total)}<br />
+          <b>({metric.percentage}%)</b>
         </p>
       </div>
     </div>

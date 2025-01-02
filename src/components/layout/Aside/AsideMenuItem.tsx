@@ -17,9 +17,8 @@ const AsideMenuItem: FC<AsideMenuItemProps> = ({
     href={href}
     className={classNames(
       "flex items-center gap-2 p-4 px-12",
-      "transition-all font-semibold relative", {
-      "dark:text-purple-100 text-purple-900": isActive,
-      "text-purple-100": !isActive
+      "transition-all relative text-white", {
+      "font-semibold": isActive,
     })}
   >
     {icon}

@@ -4,7 +4,7 @@
 
 @layer components {
   body {
-    @apply bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 flex
+    @apply bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 flex bg-cloud bg-cover bg-center
   }
 
   .scrollbar-hidden::-webkit-scrollbar {

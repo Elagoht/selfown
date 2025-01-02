@@ -6,15 +6,17 @@ const AsideMenu: FC<DictedComponent> = ({
   dictionary
 }) => {
   return <aside className="p-4 h-screen">
-    <div className="flex flex-col bg-purple-500 w-72 h-full items-center
-      gap-10 py-4 rounded-3xl scrollbar-hidden overflow-auto">
+    <div className="flex flex-col bg-black bg-opacity-30 backdrop-blur-md
+      h-full items-center gap-10 py-4 rounded-3xl scrollbar-hidden w-72
+      overflow-auto"
+    >
       <figure className="flex flex-col items-center">
         <IconCloud
           stroke={1.5}
-          className="w-32 h-32 text-purple-100"
+          className="w-32 h-32 text-white"
         />
 
-        <h1 className="text-3xl text-purple-100 font-bold">
+        <h1 className="text-3xl text-white font-bold">
           {dictionary.layout.aside.title}
         </h1>
       </figure>
