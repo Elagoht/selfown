@@ -37,8 +37,11 @@ const SystemStatus = () => {
 
   return <div className="grid grid-cols-4 gap-4">
     <UsageMetricCard name="RAM" metric={systemStatus.ram} convertTo="GB" />
+
     <UsageMetricCard name="Swap" metric={systemStatus.swap} convertTo="GB" />
+
     <UsageMetricCard name="CPU" metric={systemStatus.cpu} convertTo="None" />
+
     <UsageMetricCard name="Disk" metric={systemStatus.disk} convertTo="GB" />
   </div>
 }
