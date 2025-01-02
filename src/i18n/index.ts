@@ -1,4 +1,4 @@
-import Hello, { HelloError } from "@/utility/Hello"
+import Hello from "@/utility/Hello"
 
 const getDictionary = async () => {
   const locale = await Hello.determineLocale()
@@ -6,15 +6,15 @@ const getDictionary = async () => {
 
   switch (localeToUse) {
     case "tr":
-      return import("@/i18n/turkish.json")
+      return (await import("@/i18n/turkish.json")).default
     case "en":
     default:
-      return import("@/i18n/english.json")
+      return (await import("@/i18n/english.json")).default
   }
 }
 
 export default getDictionary
 
 declare global {
-  type Dictionary = ReturnType<typeof getDictionary>
+  type Dictionary = Awaited<ReturnType<typeof getDictionary>>
 }
