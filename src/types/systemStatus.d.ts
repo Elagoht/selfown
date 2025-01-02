@@ -12,9 +12,12 @@ type SystemInfo = {
   architecture: string
 }
 
-type SystemStatusResponse = {
+type SystemMemoryResponse = {
   ram: UsageMetrics
   swap: UsageMetrics
+}
+
+type SystemStatusResponse = SystemMemoryResponse & {
   cpu: UsageMetrics
   disk: UsageMetrics
   systemInfo: SystemInfo

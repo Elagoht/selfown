@@ -1,11 +1,14 @@
+import { getSystemStatus } from "@/services/system"
 import { IconCloud } from "@tabler/icons-react"
 import { FC } from "react"
 import AsideNavBar from "./AsideNavBar"
 import SystemStatus from "./SystemStatus"
 
-const AsideMenu: FC<DictedComponent> = ({
+const AsideMenu: FC<DictedComponent> = async ({
   dictionary
 }) => {
+  const systemStatus = await getSystemStatus()
+
   return <aside className="p-4 h-screen">
     <div className="flex flex-col bg-black bg-opacity-30 backdrop-blur-md
       h-full items-center gap-10 py-4 rounded-3xl scrollbar-hidden w-72
@@ -24,7 +27,7 @@ const AsideMenu: FC<DictedComponent> = ({
 
       <AsideNavBar dictionary={dictionary} />
 
-      <SystemStatus />
+      <SystemStatus initial={systemStatus} />
     </div>
   </aside>
 }
