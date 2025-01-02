@@ -48,7 +48,9 @@ describe("System", () => {
       expect(systemInfo).toBeDefined()
       expect(systemInfo.architecture).toBeDefined()
       expect(systemInfo.hostname).toBeDefined()
-      expect(systemInfo.kernel).toBeDefined()
+      expect(systemInfo.kernel_name).toBeDefined()
+      expect(systemInfo.kernel_version).toBeDefined()
+      expect(systemInfo.os_version).toBeDefined()
     } catch (error) {
       expect(error).toBeDefined()
     }
