@@ -3,7 +3,7 @@ import { exec } from "node:child_process"
 class System {
   public static ramUsage(): Promise<UsageMetrics> {
     return this.handleProcesses<UsageMetrics>(
-      'free | grep Swap | awk \'{printf "{\\"total\\":%d, \\"used\\":%d, \\"percentage\\":%.2f}\\n", $2, $3, $3/$2 * 100.0}\''
+      'free | grep Mem | awk \'{printf "{\\"total\\":%d, \\"used\\":%d, \\"percentage\\":%.2f}\\n", $2, $3, $3/$2 * 100.0}\''
     )
   }
 
