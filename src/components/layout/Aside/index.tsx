@@ -1,6 +1,7 @@
 import { IconCloud } from "@tabler/icons-react"
 import { FC } from "react"
 import AsideNavBar from "./AsideNavBar"
+import SystemStatus from "./SystemStatus"
 
 const AsideMenu: FC<DictedComponent> = ({
   dictionary
@@ -22,6 +23,8 @@ const AsideMenu: FC<DictedComponent> = ({
       </figure>
 
       <AsideNavBar dictionary={dictionary} />
+
+      <SystemStatus />
     </div>
   </aside>
 }

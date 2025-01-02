@@ -1,10 +1,10 @@
 class Convert {
   static bytesToMB(bytes: number) {
-    return `${(bytes / 1024).toFixed(2)} MB`
+    return (bytes / 1024).toFixed(2)
   }
 
   static bytesToGB(bytes: number) {
-    return `${(bytes / 1024 / 1024).toFixed(2)} GB`
+    return (bytes / 1024 / 1024).toFixed(2)
   }
 }
 

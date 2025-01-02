@@ -7,7 +7,7 @@ import {
   Legend,
   Tooltip
 } from "chart.js"
-import { useEffect, useState } from "react"
+import { FC, useEffect, useState } from "react"
 import UsageMetricCard from "./UsageMetricCard"
 
 // Register the controllers and elements needed for doughnut charts
@@ -17,7 +17,7 @@ ChartJS.register(
   Legend
 )
 
-const SystemStatus = () => {
+const SystemStatus: FC = () => {
   const [systemStatus, setSystemStatus] = useState<
     SystemStatusResponse | null
   >()
@@ -35,14 +35,29 @@ const SystemStatus = () => {
 
   if (!systemStatus) return <div>Loading...</div>
 
-  return <div className="grid grid-cols-4 gap-4">
-    <UsageMetricCard name="RAM" metric={systemStatus.ram} convertTo="GB" />
+  return <div className="grid grid-cols-2 gap-4">
+    <UsageMetricCard
+      name="RAM"
+      metric={systemStatus.ram}
+      convertTo="GB"
+    />
 
-    <UsageMetricCard name="Swap" metric={systemStatus.swap} convertTo="GB" />
+    <UsageMetricCard
+      name="Swap"
+      metric={systemStatus.swap}
+      convertTo="GB"
+    />
 
-    <UsageMetricCard name="CPU" metric={systemStatus.cpu} convertTo="None" />
+    <UsageMetricCard
+      name="CPU"
+      metric={systemStatus.cpu}
+    />
 
-    <UsageMetricCard name="Disk" metric={systemStatus.disk} convertTo="GB" />
+    <UsageMetricCard
+      name="Disk"
+      metric={systemStatus.disk}
+      convertTo="GB"
+    />
   </div>
 }
 
