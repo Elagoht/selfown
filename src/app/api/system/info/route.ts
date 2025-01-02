@@ -19,6 +19,9 @@ export const GET = async () => {
     return NextResponse.json({
       error:
         "Failed to fetch system information"
-    }, { status: 500 })
+    }, {
+      status: 500,
+      headers: { "Cache-Control": "no-cache, no-store, must-revalidate" }
+    })
   }
 }
