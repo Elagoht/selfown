@@ -5,7 +5,9 @@ import { FC } from "react"
 import AsideMenuItem from "./AsideMenuItem"
 import asideMenu from "./menu"
 
-const AsideNavBar: FC = () => {
+const AsideNavBar: FC<DictedComponent> = ({
+  dictionary
+}) => {
   const pathname = usePathname()
 
   const findActiveLinkIndex = () => {
@@ -23,7 +25,6 @@ const AsideNavBar: FC = () => {
       }}
     />
 
-    {/* Inverted radius */}
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -62,6 +63,7 @@ const AsideNavBar: FC = () => {
 
     {asideMenu.map((item) =>
       <AsideMenuItem
+        dictionary={dictionary}
         key={item.title}
         title={item.title}
         icon={item.icon}

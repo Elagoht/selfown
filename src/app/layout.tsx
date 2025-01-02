@@ -11,7 +11,7 @@ const RootLayout: FC<ParentComponent> = async ({
 
   return <html lang={dictionary.meta.lang}>
     <body className={font.className}>
-      <AsideMenu />
+      <AsideMenu dictionary={dictionary} />
 
       <div className="flex-1 p-4 pl-0">
         {children}

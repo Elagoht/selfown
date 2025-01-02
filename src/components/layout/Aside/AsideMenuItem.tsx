@@ -2,15 +2,15 @@ import classNames from "classnames"
 import Link from "next/link"
 import { FC } from "react"
 
-type AsideMenuItemProps = {
-  title: string
+type AsideMenuItemProps = DictedComponent<{
+  title: keyof Dictionary["layout"]["aside"]["menu"]
   icon: React.ReactNode
   href: string
   isActive?: boolean
-}
+}>
 
 const AsideMenuItem: FC<AsideMenuItemProps> = ({
-  title, icon, href, isActive = false
+  dictionary, title, icon, href, isActive = false
 }) => {
   return <Link
     key={title}
@@ -24,7 +24,7 @@ const AsideMenuItem: FC<AsideMenuItemProps> = ({
   >
     {icon}
 
-    {title}
+    {dictionary.layout.aside.menu[title]}
   </Link>
 }
 
