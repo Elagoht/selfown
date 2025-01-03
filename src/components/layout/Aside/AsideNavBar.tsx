@@ -14,7 +14,7 @@ const AsideNavBar: FC<DictedComponent> = ({
     return asideMenu.findIndex((item) => item.href === pathname)
   }
 
-  return <nav className="flex flex-col gap-2 w-full mt-12 relative">
+  return <nav className="flex flex-col gap-2 w-full relative grow">
     <div
       className="absolute left-6 h-16 right-0 bg-black bg-opacity-30
       backdrop-blur-md rounded-l-full transition-all drop-shadow-md"
@@ -22,7 +22,8 @@ const AsideNavBar: FC<DictedComponent> = ({
         top: 0,
         bottom: 0,
         transform: `translateY(${findActiveLinkIndex() * 4
-          - 0.25}rem)`
+          - 0.25}rem)`,
+        opacity: findActiveLinkIndex() < 0 ? 0 : 1
       }}
     />
 
@@ -35,11 +36,12 @@ const AsideNavBar: FC<DictedComponent> = ({
         top: 0,
         bottom: 0,
         transform: `translateY(${findActiveLinkIndex() * 4
-          - 1.75}rem)`
+          - 1.75}rem)`,
+        opacity: findActiveLinkIndex() < 0 ? 0 : 1
       }}
     >
       <path
-        className="fill-black opacity-30"
+        className="fill-black opacity-50"
         d="M19.999813 0C19.99971 11.045549 11.045549 19.99971 0 19.999813h19.999813z"
       />
     </svg>
@@ -53,11 +55,12 @@ const AsideNavBar: FC<DictedComponent> = ({
         top: 0,
         bottom: 0,
         transform: `translateY(${findActiveLinkIndex() * 4
-          + 3.75}rem) scaleY(-1)`
+          + 3.75}rem) scaleY(-1)`,
+        opacity: findActiveLinkIndex() < 0 ? 0 : 1
       }}
     >
       <path
-        className="fill-black opacity-30"
+        className="fill-black opacity-50"
         d="M19.999813 0C19.99971 11.045549 11.045549 19.99971 0 19.999813h19.999813z"
       />
     </svg>

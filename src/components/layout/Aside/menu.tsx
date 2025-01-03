@@ -1,6 +1,6 @@
 import {
   IconApps, IconBuildingStore,
-  IconDashboard, IconSettings
+  IconDashboard
 } from "@tabler/icons-react"
 
 const iconProps = {
@@ -19,10 +19,6 @@ const asideMenu: AsideMenuItem[] = [{
   title: "store",
   icon: <IconBuildingStore {...iconProps} />,
   href: "/store"
-}, {
-  title: "settings",
-  icon: <IconSettings {...iconProps} />,
-  href: "/settings"
 }]
 
 export default asideMenu

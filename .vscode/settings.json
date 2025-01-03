@@ -2,7 +2,12 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
     "source.removeUnusedImports": "always",
-    "source.organizeImports": "always"
+    "source.organizeImports": "always",
+    "source.fixAll.tslint": "always",
+    "source.fixAll.stylelint": "always",
+    "source.sortImports": "always",
+    "source.fixAll.ts": "always",
+    "source.addMissingImports.ts": "always"
   },
   "eslint.validate": [
     "javascript",

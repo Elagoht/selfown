@@ -6,17 +6,24 @@
     "aside": {
       "title": "SelfOwn",
       "menu": {
-        "dashboard": "Dashboard",
-        "settings": "Ayarlar",
+        "dashboard": "Genel Bakış",
         "myApps": "Uygulamalarım",
         "store": "Mağaza"
       }
     }
   },
   "pages": {
-    "dashboad": {
-      "title": "SelfOwn",
-      "slogan": "Kendi verine sahip ol!"
+    "dashboard": {
+      "title": "Genel Bakış"
+    },
+    "store": {
+      "title": "Mağaza"
+    },
+    "myApps": {
+      "title": "Uygulamalarım"
+    },
+    "settings": {
+      "title": "Ayarlar"
     }
   }
 }

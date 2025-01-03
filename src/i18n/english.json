@@ -7,16 +7,23 @@
       "title": "SelfOwn",
       "menu": {
         "dashboard": "Dashboard",
-        "settings": "Settings",
         "myApps": "My Apps",
         "store": "Store"
       }
     }
   },
   "pages": {
-    "dashboad": {
-      "title": "SelfOwn",
-      "slogan": "Own your own data!"
+    "dashboard": {
+      "title": "Dashboard"
+    },
+    "store": {
+      "title": "Store"
+    },
+    "myApps": {
+      "title": "My Apps"
+    },
+    "settings": {
+      "title": "Settings"
     }
   }
 }

@@ -1,9 +1,15 @@
-import React from "react"
+import BreadShop from "@/components/stores/BreadShop"
+import getDictionary from "@/i18n"
 
-const InstalledAppsPage = () => {
-  return (
-    <div>InstalledAppsPage</div>
-  )
+const InstalledAppsPage = async () => {
+  const dictionary = await getDictionary()
+
+  return <div>
+    <BreadShop breadcrumbs={[{
+      title: dictionary.pages.myApps.title,
+      href: "/apps"
+    }]} />
+  </div>
 }
 
 export default InstalledAppsPage

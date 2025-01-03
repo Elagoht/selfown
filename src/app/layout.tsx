@@ -1,4 +1,5 @@
 import AsideMenu from "@/components/layout/Aside"
+import Header from "@/components/layout/Header"
 import "@/design/globals.css"
 import getDictionary from "@/i18n"
 import { Poppins } from "next/font/google"
@@ -14,6 +15,8 @@ const RootLayout: FC<ParentComponent> = async ({
       <AsideMenu dictionary={dictionary} />
 
       <div className="flex-1 p-4 pl-0">
+        <Header />
+
         {children}
       </div>
     </body>

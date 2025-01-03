@@ -1,6 +1,6 @@
-import tsParser from "@typescript-eslint/parser"
-import tsPlugin from "@typescript-eslint/eslint-plugin"
 import nextPlugin from "@next/eslint-plugin-next"
+import tsPlugin from "@typescript-eslint/eslint-plugin"
+import tsParser from "@typescript-eslint/parser"
 
 export default [
   {
@@ -150,6 +150,29 @@ export default [
       semi: [
         "error",
         "never"
+      ],
+      "react/jsx-first-prop-new-line": [
+        "error",
+        "multiprop"
+      ],
+      "react/jsx-max-props-per-line": [
+        "error",
+        {
+          "maximum": 1,
+          "when": "always"
+        }
+      ],
+      "react/jsx-wrap-multilines": [
+        "error",
+        {
+          "declaration": "never",
+          "assignment": "never",
+          "return": "never",
+          "arrow": "never",
+          "condition": "never",
+          "logical": "never",
+          "prop": "never"
+        }
       ]
     }
   }
